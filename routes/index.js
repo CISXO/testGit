@@ -1,9 +1,10 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+/* GET root - health check */
+router.get("/", function (req, res, next) {
+
+  res.json({ message: "API server running", path: "/" });
 });
 
 module.exports = router;
