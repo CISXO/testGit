@@ -25,7 +25,7 @@ const corsOptions = {
 
 // 라우터
 const indexRouter = require("./routes/index");
-const testRouter = require("./routes/test");
+const enterpriseRouter = require("./routes/enterPrise");
 
 // 미들웨어
 app.use(logger("dev"));
@@ -36,7 +36,8 @@ app.use(cookieParser());
 
 // 라우팅
 app.use("/", indexRouter);
-app.use("/api/test", testRouter);
+app.use("/api/enterprise", enterpriseRouter);
+
 
 // tokenScheduler 스케줄러 실행 (토큰 자동 갱신)
 // require("./service/Scheduler/tokenScheduler");
